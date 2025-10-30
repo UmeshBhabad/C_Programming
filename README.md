@@ -3,6 +3,10 @@
 <h3 align="center">A passionate Software developer from India</h3>
 <h2># C_Programming</h2>
 <h3>"Programs &amp; Logic Building"</h3>
+<p>
+  A personal repository to store and track my C programming practice codes. This repo includes solutions to various problems I solve while learning C — from basics to advanced concepts. It’s my small step toward improving programming logic, problem-solving skills, and consistent learning in C.
+</p>
+
 - 🌱 I’m currently learning **C Language**</br>
 - 📫 How to reach me **umeshbhabad9@gmail.com**
 
