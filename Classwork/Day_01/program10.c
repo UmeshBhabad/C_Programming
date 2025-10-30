@@ -17,6 +17,10 @@ START
 STOP
 */
 
+// Program
+
+// Cherry on the top: Added comments for better understanding
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  Required Header File
@@ -34,11 +38,12 @@ STOP
 //  Date:           09/10/2025
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
-float AdditionTwoNumbers(float fNo1,float fNo2){
-    
+float AdditionTwoNumbers(float fNo1,float fNo2)
+{    
     float fSum=0.0f;
 
     //Updater
+
     if(fNo1<0.0f){
         fNo1= -fNo1;
     }
@@ -47,7 +52,8 @@ float AdditionTwoNumbers(float fNo1,float fNo2){
         fNo2= -fNo2;
     }
 
-    fSum=fNo1+fNo2;// Business Logic
+    fSum=fNo1+fNo2;                                     // Business Logic
+    
     return fSum;
 }
 
@@ -56,19 +62,19 @@ float AdditionTwoNumbers(float fNo1,float fNo2){
 //  Entry point function for the Application
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
-float main(){
+float main()
+{    
+    float fValue1=0.0f, fValue2=0.0f, fRet=0.0f;        // Local Variables
     
-    float fValue1=0.0f, fValue2=0.0f, fRet=0.0f;
-    
-    printf("Enter First Number: \n");
+    printf("Enter First Number: \n");                   // Input
     scanf("%f",&fValue1);
     
-    printf("Enter Second Number: \n");
+    printf("Enter Second Number: \n");                  // Input
     scanf("%f",&fValue2);
     
-    fRet=AdditionTwoNumbers(fValue1,fValue2);//Function Call
+    fRet=AdditionTwoNumbers(fValue1,fValue2);           //Function Call
 
-    printf("Addition is: %f\n",fRet);
+    printf("Addition is: %f\n",fRet);                   // Output
     
     return 0;
 }

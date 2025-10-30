@@ -16,29 +16,32 @@ START
 STOP
 */
 
-//Program
+// Program
+
+// Program to perform addition of two floating point numbers
+
 #include <stdio.h>
 
-float AdditionTwoNumbers(float fNo1,float fNo2){
-    
-    float fSum=0.0f;
-    fSum=fNo1+fNo2;// Business Logic
+float AdditionTwoNumbers(float fNo1, float fNo2)                  // Function Definition
+{    
+    float fSum = 0.0f;
+    fSum = fNo1+fNo2;                                             // Business Logic
     return fSum;
 }
 
-float main(){
+float main()
+{    
+    float fValue1 = 0.0f, fValue2 = 0.0f, fRet = 0.0f;            // Local Variable
     
-    float fValue1=0.0f, fValue2=0.0f, fRet=0.0f;
-    
-    printf("Enter First Number: \n");
+    printf("Enter First Number: \n");                             // Input
     scanf("%f",&fValue1);
     
-    printf("Enter Second Number: \n");
+    printf("Enter Second Number: \n");                            // Input
     scanf("%f",&fValue2);
     
-    fRet=AdditionTwoNumbers(fValue1,fValue2);//Function Call
+    fRet=AdditionTwoNumbers(fValue1,fValue2);                     // Function Call
 
-    printf("Addition is: %f\n",fRet);
+    printf("Addition is: %f\n",fRet);                             // Output
     
     return 0;
 }

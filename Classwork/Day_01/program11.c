@@ -9,6 +9,10 @@ START
 STOP
 */
 
+// Program
+
+// Cherry on the top: Added comments for better understanding
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  Required Header File
@@ -50,8 +54,8 @@ float AdditionTwoNumbers(
 //  Entry point function for the Application
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
-float main(){
-    
+float main()
+{    
     float fValue1=0.0f, fValue2=0.0f;           //To accept user inputs
     float fRet=0.0f;                            //To store the result
     
@@ -63,7 +67,7 @@ float main(){
     
     fRet=AdditionTwoNumbers(fValue1,fValue2);   //Function Call
 
-    printf("Addition is: %f\n",fRet);
+    printf("Addition is: %f\n",fRet);           // Output
     
     return 0;
 }   //End of main
