@@ -1,4 +1,7 @@
 // best approach
+
+// Use void instead of int main() in C11 standard
+
 #include <stdio.h>
 
 void Display()                   
@@ -11,7 +14,7 @@ void Display()
 }
 
 
-void main()                         //It should be int main()
+void main()                                 //It should be int main()
 {
     
     Display();

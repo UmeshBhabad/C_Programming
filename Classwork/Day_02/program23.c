@@ -1,4 +1,7 @@
 // best approach
+
+// Use int main() as per C11 standard
+
 #include <stdio.h>
 
 void Display()                   

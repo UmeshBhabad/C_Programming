@@ -1,12 +1,17 @@
+// Program
+
+// Using boolean return type to check even or odd
+
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdbool.h>                            // Header file for boolean data type
 
-bool CheckEvenOdd(bool iNo){
-    int iRem=0;
+bool CheckEvenOdd(bool iNo)                     // Function to check even or odd
+{
+    int iRem = 0;                               // Variable to store remainder 
 
-    iRem=iNo%2;
+    iRem = iNo%2;                               // Modulus operator to get remainder
     
-    if (iRem==0)
+    if (iRem == 0)                              // Condition to check even or odd(Business Logic)
     {
         return true;
     }else{
@@ -14,16 +19,17 @@ bool CheckEvenOdd(bool iNo){
     }
 }
 
-int main() {
+int main()
+{    
+    int iValue = 0;
+    bool bRet = false;                          // Variable to store boolean result
+
+    printf("Enter Number: ");                   // Accept number from user
+    scanf("%d",&iValue);                        // Store the value in iValue
+
+    bRet = CheckEvenOdd(iValue);                // Function Call
     
-    int iValue=0;
-    bool bRet=false;
-
-    printf("Enter Number: ");
-    scanf("%d",&iValue);
-
-    bRet=CheckEvenOdd(iValue);
-    printf("Result is : %d\n",bRet);
+    printf("Result is : %d\n",bRet);            // Display the boolean result
 
 
 

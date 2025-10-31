@@ -1,11 +1,15 @@
 // best approach
+
+// Application to demonstrate the concept of Dynamic Function
+
 #include <stdio.h>
 
-void Display(int iFrequency)                   
+void Display(int iFrequency)                                    // Function Definition                   
 {
     // Dynamic function
-    int iCnt=0;
-    for(iCnt=1;iCnt<=iFrequency;iCnt++){
+    int iCnt = 0;
+    for(iCnt = 1; iCnt <= iFrequency; iCnt++)                   // Logic
+    {
         printf("Jay Ganesh...\n");
     }    
 }
@@ -13,10 +17,12 @@ void Display(int iFrequency)
 
 int main()                        
 {
-    int iCount=0;
-    printf("Enter the Count: ");
+    int iCount=0;                                               // Local Variable
+
+    printf("Enter the Count: ");                                // Input
     scanf("%d",&iCount);
 
-    Display(iCount);
+    Display(iCount);                                            // Function Call   
+    
     return 0;    
 }
