@@ -1,31 +1,37 @@
+// Program
+
 // Factors of 6
+
 #include <stdio.h>
 
-void  DisplaynonFactors(int iNo){
-    int iCnt=0;
+void  DisplaynonFactors(int iNo)                                        // Function to display non-factors
+{
+    int iCnt = 0;
     
-    if(iNo<0){
-        iNo= -iNo;
+    if(iNo < 0)                                                         // Updator for negative input                        
+    {
+        iNo = -iNo;
     }
-    for(iCnt=1; iCnt<= (iNo/2); iCnt++){
-        if(iNo%iCnt!=0){
+
+    for(iCnt = 1; iCnt <= (iNo/2); iCnt++)                              // Loop to check for non-factors
+    {
+        if(iNo % iCnt != 0)                                             // Condition to identify non-factors
+        {
             printf("%d\n",iCnt);
         }
-    }
-    
-        
-    
+    }    
 }
 
 // Time Complexity: O(N/2)
-int main(){
 
-    int iValue=0;
+int main()
+{
+    int iValue = 0;
     
-    printf("Enter the Number: ");
+    printf("Enter the Number: ");                                       // Input from user
     scanf("%d",&iValue);
 
-    DisplaynonFactors(iValue);
+    DisplaynonFactors(iValue);                                          // Function Call 
 
 
     return 0;

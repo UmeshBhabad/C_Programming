@@ -1,27 +1,20 @@
+// Program
+
+// Using loop write a program to display 1 to 5 using function.
+
 #include <stdio.h>
-void display(){
-    int iCount=0;
-    for(iCount=1;iCount<=5;iCount++){
-        printf("%d\t",iCount);
+void display()
+{
+    int iCount = 0;
+    //       1         2            3    
+    for(iCount = 1; iCount <= 5; iCount++)                                  // Using For Loop
+    {
+        printf("%d\t",iCount);// 4
     }
 }
-int main(){
 
+int main()
+{
     display();
     return 0;
 }
-
-/*
-#include <stdio.h>
-void display(int iNum){
-    int iCount=0;
-    for(iCount=1;iCount<=iNum;iCount++){
-        printf("%d\t",iCount);
-    }
-}
-int main(){
-
-    display(10);
-    return 0;
-}
-*/
