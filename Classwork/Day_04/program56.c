@@ -1,45 +1,57 @@
+// Program
+
+// Optimized Program to check whether the given number is prime or not(better approach)
+
 #include <stdio.h>
 #include <stdbool.h>
 
-bool CheckPrime(int iNo){
+bool CheckPrime(int iNo)                                // Function defination
+{
+    int iCnt = 0;                                       // Loop Variable
 
-    int iCnt=0;
-
-    if(iNo<0){
-        iNo=-iNo;
+    if(iNo < 0)                                         // Input Updation
+    {
+        iNo = -iNo;
     }
 
     // Input : 6   iCnt = 2
     
-    for(iCnt=2; iCnt <= iNo/2; iCnt++){
+    for(iCnt = 2; iCnt <= iNo/2; iCnt++)                // Loop
+    {
         
-        if(iNo % iCnt == 0)
+        if(iNo % iCnt == 0)                             // Business Logic
         {
-            break;                                      //Optimizaton
+            break;                                      // Optimizaton
         }
 
     }
 
-    if(iCnt > iNo /2)                                   //No Factors
+    if(iCnt > iNo /2)                                   // No Factors
     {
         return true;
-    }else{
+    }
+    else
+    {
         return false;
     }
 }
-int main(){
 
-    int iValue=0;
-    bool bRet=false;
+int main()
+{
+    int iValue = 0;                                     // Variable Declaration
+    bool bRet = false;
     
-    printf("Enter the Number: ");
+    printf("Enter the Number: ");                       // Input
     scanf("%d",&iValue);
 
-    bRet=CheckPrime(iValue);
+    bRet = CheckPrime(iValue);                          // Function Call
 
-    if(bRet==true){
+    if(bRet == true)                                    // Display Output
+    {
         printf("%d is a Prime Number",iValue);
-    }else{
+    }
+    else
+    {
         printf("%d is not a Prime Number",iValue);
     }
 

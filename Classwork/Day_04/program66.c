@@ -1,9 +1,11 @@
-// Iteration
+// Program
+
+// Iteration to Display Digits of a Number (Number of iterations depends on input).
 
 #include <stdio.h>
 
-int main(){
-
+int main()
+{
     int iNo = 0;
     int iDigit = 0;
 
@@ -14,17 +16,15 @@ int main(){
     printf("-------------------------------------------------------\n");
     printf("Original value of iNo is : %d\n",iNo);
 
-    while(iNo!=0)
+    while(iNo != 0)
     {
         printf("-------------------------------------------------------\n");
-        iDigit= iNo % 10;
+        iDigit = iNo % 10;
         printf("iDigit is : %d\n",iDigit);
-        iNo=iNo/10;
+        iNo = iNo / 10;
         printf("iNo is : %d\n",iNo);
     }
     
-
-
     printf("-------------------------------------------------------\n");
 
     return 0;

@@ -1,43 +1,52 @@
+// Program
+
+// Updating Flag before loop to assume number is prime
+
 #include <stdio.h>
 #include <stdbool.h>
 
-bool CheckPrime(int iNo){
+bool CheckPrime(int iNo)                                // Function defination
+{
+    int iCnt = 0;                                       // Loop Variable
+    bool bFlag = false;                                 // Flag Variable set to false
 
-    int iCnt=0;
-    bool bFlag=false;
-
-    if(iNo<0){
-        iNo=-iNo;
+    if(iNo < 0)                                         // Update input if negative
+    {
+        iNo = -iNo;
     }
 
     // Input : 6   iCnt = 2
-    bFlag=true;
-    for(iCnt=2; iCnt <= iNo/2; iCnt++){
-        
-        if(iNo % iCnt == 0)
+    bFlag = true;                                       // Assume prime until proven otherwise  
+
+    for(iCnt = 2; iCnt <= iNo/2; iCnt++)                
+    {      
+        if(iNo % iCnt == 0)                             // Business Logic
         {
-            bFlag= false;
-            break;                                      //Optimizaton
+            bFlag = false;
+            break;                                      // Optimizaton
         }
 
     }
-
     return bFlag;
 
 }
-int main(){
 
-    int iValue=0;
-    bool bRet=false;
+int main()
+{
+    int iValue = 0;                                     // Variable Declaration  
+    bool bRet = false;
     
-    printf("Enter the Number: ");
+    printf("Enter the Number: ");                       // Input
     scanf("%d",&iValue);
 
-    bRet=CheckPrime(iValue);
+    bRet = CheckPrime(iValue);                          // Function Call
 
-    if(bRet==true){
+    if(bRet == true)                                    // Display Output  
+    {
         printf("%d is a Prime Number",iValue);
-    }else{
+    }
+    else
+    {
         printf("%d is not a Prime Number",iValue);
     }
 

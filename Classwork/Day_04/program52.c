@@ -1,16 +1,22 @@
-// Count Non-Factors
+// Program
+
+// Program to Count Non-Factors
+
 #include <stdio.h>
 
-int CountNonFactors(int iNo){
-    int iCnt, iFrequency=0;
+int CountNonFactors(int iNo)                                    // Function defination
+{
+    int iCnt, iFrequency = 0;                                   // Local Variable
 
-    if(iNo<0){
+    if(iNo < 0)                                                 // Updator 
+    {
         iNo = -iNo;
     }
 
-    for(iCnt=1; iCnt < iNo; iCnt++){
+    for(iCnt = 1; iCnt <= iNo; iCnt++)                           // Loop
+    {
 
-        if((iNo % iCnt) != 0)
+        if((iNo % iCnt) != 0)                                   // Business Logic
         {
             iFrequency++;
         }
@@ -20,16 +26,16 @@ int CountNonFactors(int iNo){
 }
 
 
-int main(){
+int main()
+{
+    int iValue, iRet = 0;                                       // Variable Declaration
 
-    int iValue, iRet =0;
+    printf("Enter the Number: ");                               // Input  
+    scanf("%d",&iValue);
 
-    printf("Enter the Number: ");
-    scanf("%d\n",&iValue);
-
-    iRet=CountNonFactors(iValue);
+    iRet = CountNonFactors(iValue);                             // Function Call
     
-    printf("Number of Non-factors are : ",iRet);
+    printf("Number of Non-factors are : %d",iRet);              // Output
 
     return 0;
 }
