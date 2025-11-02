@@ -4,8 +4,8 @@
 //
 // Function Name: Accept
 // Description:   Used to print "*" on screen based on user input
-// Input:         Integer, Integer
-// Output:        Integer
+// Input:         Integer
+// Output:        String
 // Author:        Umesh Shivaji Bhabad
 // Date:          02/11/2025
 //
