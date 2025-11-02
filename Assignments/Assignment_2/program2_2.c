@@ -1,4 +1,4 @@
-// Accept one number from user and print that number of "*" on the screen.
+// Accept one number from user and print that number of "*" on the screen(optimized).
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
@@ -15,17 +15,15 @@
 
 void Display(int iNo)                                       // Function Definition
 {
-    int iCnt = 0;
-
     if(iNo < 0)                                             // Updator
     {
         iNo = -iNo;
     }
 
-    while(iCnt < iNo)                                       // Logic    
+    while(iNo > 0)                                          // Logic    
     {
         printf("*\n");
-        iCnt++;                                           
+        iNo--;                                           
     }
 }
 
