@@ -1,11 +1,12 @@
 
 #include <stdio.h>
 
-void Display(int Arr[])                                       
+void Display(int Arr[])                         // Function defination
 {
     int iCnt = 0;
     
-    for(iCnt = 0; iCnt < 7; iCnt++)
+                  // Change
+    for(iCnt = 0; iCnt < 7; iCnt++)             // Business Logic(prints all elements)
     {
         printf("%d\n",Arr[iCnt]);
     }
@@ -13,9 +14,9 @@ void Display(int Arr[])
 
 int main()
 {  
-    int Brr[]={10,20,30,40,50,60,70};
+    int Brr[] = {10,20,30,40,50,60,70};         // Static array Declaration, Initialization
 
-    Display(Brr);
+    Display(Brr);                               // Function Call
 
     return 0;
 }

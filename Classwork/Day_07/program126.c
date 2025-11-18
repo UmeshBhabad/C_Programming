@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void Display(int Arr[], int iSize)                                       
+void Display(int Arr[], int iSize)                      // Function defination
 {
     int iCnt = 0;
     
-    for(iCnt = 0; iCnt < iSize; iCnt++)
+    for(iCnt = 0; iCnt < iSize; iCnt++)                 // Business Logic
     {
         printf("%d\n",Arr[iCnt]);
     }
@@ -14,22 +14,22 @@ void Display(int Arr[], int iSize)
 
 int main()
 {  
-    int iLength = 0;
+    int iLength = 0;                                    // Local variables
     int *ptr = NULL;
     int iCnt = 0;
     
-    printf("Enter Number of Elements : \n");
+    printf("Enter Number of Elements : \n");            // Accept input size
     scanf("%d", &iLength);
 
-    ptr = (int *)malloc(iLength*sizeof(int));
+    ptr = (int *)malloc(iLength*sizeof(int));           // Dynamic array pointer declaration, Dynamic memory allocation
 
-    if(NULL == ptr)                                                            // Industrial way of coding
+    if(NULL == ptr)                                      // Industrial way of coding
     {
         printf("Unable to locate the memory");
         return -1;
     }
 
-    printf("Enter the elements : \n");
+    printf("Enter the elements : \n");                  // Accept array elements
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
@@ -37,9 +37,9 @@ int main()
     }
 
 
-    Display(ptr, iLength);
+    Display(ptr, iLength);                              // Function call
 
-    free(ptr);
+    free(ptr);                                          // Deallocate allocated memory
 
     return 0;
 }

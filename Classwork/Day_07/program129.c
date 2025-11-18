@@ -1,14 +1,15 @@
+// Accept N Numbers from user and return the count of even numbers
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int CountEven(int Arr[], int iSize)                                       
+int CountEven(int Arr[], int iSize)                             // Function to count even numbers
 {
-    int iCnt = 0, iCount = 0;
+    int iCnt = 0, iCount = 0;                                   // Local Variables
     
-    for(iCnt = 0; iCnt < iSize; iCnt++)
+    for(iCnt = 0; iCnt < iSize; iCnt++)                         // Traversal through array
     {
-        if(Arr[iCnt] % 2 == 0)
+        if(Arr[iCnt] % 2 == 0)                                  // Business Logic
         {
             iCount++;
         }
@@ -19,22 +20,22 @@ int CountEven(int Arr[], int iSize)
 
 int main()
 {  
-    int iLength = 0;
+    int iLength = 0;                                            // Local Variables
     int *ptr = NULL;
     int iCnt = 0, iRet = 0;
     
-    printf("Enter Number of Elements : \n");
+    printf("Enter Number of Elements : \n");                    // Accept input array length
     scanf("%d", &iLength);
 
-    ptr = (int *)malloc(iLength*sizeof(int));
+    ptr = (int *)malloc(iLength*sizeof(int));                   // pointer to array, Memory allocation
 
-    if(NULL == ptr)                                                            // Industrial way of coding
+    if(NULL == ptr)                                             // check for an empty array
     {
         printf("Unable to locate the memory");
         return -1;
     }
 
-    printf("Enter the elements : \n");
+    printf("Enter the elements : \n");                          // Accept array elements
 
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
@@ -42,11 +43,11 @@ int main()
     }
 
 
-    iRet = CountEven(ptr, iLength);
+    iRet = CountEven(ptr, iLength);                             // Function call
 
-    printf("Count of even number in a array is %d\n", iRet);
+    printf("Count of even number in a array is %d\n", iRet);    // Output
 
-    free(ptr);
+    free(ptr);                                                  // Deallocate allocated memory
 
     return 0;
 }
