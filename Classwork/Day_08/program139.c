@@ -1,4 +1,4 @@
-// Accept N numbers of user as well as another number and check whether the number is present in the array.
+// Accept N numbers from user as well as another number and check whether the number is present in the array(Different Approach).
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,12 +6,12 @@
 
 typedef int * IPTR;
 
-// < O(N)
-bool LinearSearch(int Arr[], int iSize, int iNo)
+// Time Complexity : < O(N)
+bool LinearSearch(int Arr[], int iSize, int iNo)                // Function Defination
 {
-    int iCnt = 0;
+    int iCnt = 0;                                               // Local Variable
 
-    for(iCnt = 0; iCnt < iSize; iCnt++)
+    for(iCnt = 0; iCnt < iSize; iCnt++)                         // Business Logic
     {
         if(Arr[iCnt] == iNo)
         {
@@ -31,38 +31,38 @@ bool LinearSearch(int Arr[], int iSize, int iNo)
 
 int main()
 {
-    int iLength = 0;
+    int iLength = 0;                                            // Local Variables
     int iCnt = 0;
     bool bRet = false;
     int iValue = 0;
     IPTR iPtr = NULL;
 
-    printf("Enter the number of elements : \n");
+    printf("Enter the number of elements : \n");                // Accept Input array length
     scanf("%d", &iLength);
 
     // Step 1 : Allocate the memory
-    iPtr = (IPTR)malloc(iLength * sizeof(int)); 
+    iPtr = (IPTR)malloc(iLength * sizeof(int));                 // pointer to array, Memory allocation
     
-    if(NULL == iPtr)
+    if(NULL == iPtr)                                            // Check if memory is allocated
     {
         printf("Unable to allocate the memory.\n");
         return -1;
     }
 
-    printf("Enter the Elements :\n");
+    printf("Enter the Elements :\n");                           // Input array elements
     for(iCnt = 0; iCnt < iLength; iCnt++)
     {
         scanf("%d", &iPtr[iCnt]);
     }
 
-    printf("Enter the Value to Search : \n");
+    printf("Enter the Value to Search : \n");                   // Input Value to Search
     scanf("%d", &iValue);
 
     // Step 2 : Use the Memory
     
-    bRet = LinearSearch(iPtr, iLength, iValue);
+    bRet = LinearSearch(iPtr, iLength, iValue);                 // Function call
 
-    if(bRet == true)
+    if(bRet == true)                                            // Display Output
     {
         printf("%d is Present in the Data\n", iValue);
     }
@@ -73,7 +73,7 @@ int main()
 
     // Step 3 : Free the memory.
 
-    free(iPtr);
+    free(iPtr);                                                 // Deallocate the allocated memory
 
     return 0;
 }
