@@ -8,13 +8,14 @@
 
 #include <stdio.h>
 
-void Pattern(int iNo)                           // Function defination
+void Pattern(int iNo)                          // Function defination
 {
-    char cCnt = '0';                            // Local Variable
+    int iCnt = '0';                            // Local Variable
+    char ch = 'A';
 
-    for(cCnt = 'A'; cCnt < 'A'+iNo; cCnt++)     // Business Logic
+    for(iCnt = 1; iCnt <= iNo; ch++, iCnt++)   // Business Logic
     {
-        printf("%c\t", cCnt);
+        printf("%c\t", ch);
     }
 }
 
